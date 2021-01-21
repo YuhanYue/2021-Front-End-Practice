@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- 猜数字 -->
+
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  <mate http-equiv = "X-UA-Compatible" content = "ie-edge">
+  <title>Document</title>
+  <style>
+    img{
+      width: 300px;
+    }
+  </style>
+   <img src = "images/morning.JPG" alt= "">
+   <div>Morning!</div>
+  <script>
+   var img = document.querySelector("img");
+   var div = document.querySelector("div");
+   var time = new Date();
+   var hour = time.getHours();
+   if(hour >= 0 && hour < 12){
+       img.src = 'images/morning.HEIC';
+       div.innerHTML = '上午好，好好写代码';
+   } else if(hour <= 18){
+    img.src = 'images/afternoon.HEIC';
+       div.innerHTML = '下午好，好好写代码';
+   }
+    
+  </script>
+</head>
+
+<body>
+
+</body>      
+
+</html>
