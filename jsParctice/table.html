@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 猜数字 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <mate http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+  <table cellspacing="0">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>科目</th>
+        <th>成绩</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>yyh</td>
+        <td>JavaScript</td>
+        <td>100</td>
+        <td><a herf="#"> 删除</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    //准备数据
+    var datas = [{
+      name: 'yyh',
+      subject: 'C',
+      score:'100'
+    }]
+    //创建行
+    var tbody =document.querySelector('tbody');
+    for(var i = 0; i<datas.length; i++){
+      var tr = document.createElement('tr');
+      tbody.appendChild(tr);
+      //行里面创建单元格
+
+      for(var k in datas[i]){//i 根据外层for循环决定
+        var td = document.createElement('td');
+        td.innerHTML(datas[i][k]);
+        tr.appendChild(td);
+
+      }
+    }
+  </script>
+</body>
+
+
+</html>
